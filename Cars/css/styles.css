@@ -1,0 +1,1686 @@
+:root {
+    --bgCol: #1F1F20;
+    --subBgCol: #FFFFFF;
+    --textCol: #0087F4;
+    --headerCol: #FFB900;
+    --subHeaderCol: #F2F2F2;
+    --pCol: #EEEEEF;
+    --subPcol: ##909091;
+    --subTextCol: ;
+    --animation-timing: 200ms ease-in-out;
+    --harmbuger-height: calc(2px * 3 + 6px * 2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.home {
+    /* height: 100vh; */
+    background: var(--bgCol);
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease;    
+    z-index: 999;
+    background: var(--bgCol);
+    backdrop-filter: blur(6px);
+}
+
+.nav-hidden nav {
+    transform: translateY(-100%);
+}
+
+nav .logo img {
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "poppins";
+    color: var(--subBgCol);
+    font-weight: 500;
+}
+
+.sidebar {
+    display: none;
+}
+
+section {
+    position: relative;
+    padding-top: 100px;
+}
+
+.hero-content {
+    /* position: relative; */
+    display: flex;
+    gap: 30px;
+    font-family: "outfit";
+    align-items: center;
+    justify-content: center;
+    padding: 40px 200px;
+}
+
+.hero-img {
+    position: absolute;
+    top: 350px;
+    left: 20%;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+.hero-right p {
+    color: var(--pCol);
+}
+
+.link a {
+    color: var(--headerCol);
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+.hero-content .hero-left h1 {
+    font-size: 150px;
+    line-height: 1;
+}
+
+.hero-content .hero-left span {
+    color: var(--headerCol);
+}
+
+.hero-content .hero-left b {
+    color: var(--subBgCol);
+}
+
+.next-box {
+    margin-left: 50px;
+    /* background: red; */
+    width: 300px;
+    object-fit: contain;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    left: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-box img {
+    object-fit: cover;
+    height: 120px;
+    position: absolute;
+    bottom: 30px;
+    left: -50px;
+}
+
+.next-box .box-text {
+    position: absolute;
+    bottom: 0;
+    color: var(--headerCol);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-text a {
+    text-decoration: none;
+    color: var(--headerCol);
+}
+
+.about {
+    display: flex;
+    height: 90vh;
+    padding: 40px 200px;
+    font-family: "outfit";
+}
+
+.about-images {
+    width: 50%;
+    position: relative;
+}
+
+.uae {
+    position: absolute;
+    left: 0;
+}
+
+.uae img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.benz {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    z-index: 99;
+}
+
+.benz img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.porsche {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+}
+
+.porsche img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 50%;
+    margin-top: 5%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-content .abt-p {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.text-content .abt-p .linez {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text-content .abt-p .lines {
+    width: 55px;
+    height: 1px;
+    background: var(--textCol);
+}
+
+.text-content .abt-p .line {
+    width: 65px;
+    height: 1px;
+    background: var(--textCol);
+}
+
+.text-content b {
+    color: var(--textCol);
+}
+
+.text-content h1 {
+    font-size: 50px;
+}
+
+.text-content span {
+    color: var(--textCol);
+}
+
+.text-content .abt-btn {
+    display: flex;
+    gap: 40px;
+}
+
+.abt-btn button {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 250px;
+    height: 110px;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid var(--textCol);
+}
+
+.abt-btn h1 {
+    color: var(--textCol);
+}
+
+.abt-btn p {
+    font-weight: 700;
+    font-size: larger;
+}
+
+.service {
+    height: 80vh;
+    background: var(--bgCol);
+    font-family: "outfit";
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.service-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.small {
+    width: 60px;
+    height: 1px;
+    background: var(--textCol);
+}
+
+.bigFirst {
+    display: flex !important;
+    justify-content: right !important;
+    align-items: flex-end;
+}
+
+.big {
+    width: 80px;
+    height: 1px;
+    background: var(--textCol);
+}
+
+.service-text h1 {
+    font-size: 50px;
+    color: var(--subHeaderCol);
+}
+
+.service-text p {
+    font-size: 20px;
+    color: var(--textCol);
+}
+
+.service-cards {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card:nth-child(2) {
+    border-right: 2px solid #ddd;
+    border-left: 2px solid #ccc;
+}
+
+.service-card {
+    height: 400px;
+    width: 500px;
+    text-align: center;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    cursor: pointer;
+    /* align-items: center; */
+}
+
+
+.service-card:nth-child(1):hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/sellers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    border-left: 2px solid #ccc;
+}
+
+.service-card:nth-child(2):hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/car-rental.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.service-card:nth-child(3):hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/car-fix.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    border-right: 2px solid #ccc;
+}
+
+.service-card .service-img img {
+    height: 100px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--pCol);
+}
+
+.card-text h2 {
+    font-size: 40px;
+}
+
+.card-text p {
+    font-size: 15px;
+}
+
+.advantage {
+    height: 80vh;
+    padding: 80px 200px;
+    font-family: "Outfit";
+}
+
+.advantage-content {
+    display: flex;
+    gap: 100px;
+}
+
+.right-content {
+    width: 50%;
+}
+
+.right-images {
+    position: relative;
+}
+
+.ad-benz {
+    position: absolute;
+    left: 50%;
+}
+
+.ad-benz img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.ad-porsche {
+    top: 150px;
+    position: absolute;
+}
+
+.ad-porsche img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.left-content {
+    width: 50%;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.left-header .left-b {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ad-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ad-line {
+    height: 1px;
+    width: 50px;
+    background: var(--textCol);
+}
+
+.ad-linez {
+    height: 1px;
+    width: 65px;
+    background: var(--textCol);
+}
+
+.left-header b {
+    color: var(--textCol);
+}
+
+.left-header h1 {
+    font-size: 50px;
+}
+
+.left-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: larger;
+}
+
+.left-list {
+    padding: 40px 0;
+}
+
+.left-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* font-size: large; */
+    font-family: "poppins";
+}
+
+.left-list ul li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.left-list ul li i {
+    color: var(--textCol);
+}
+
+.vid-section {
+    height: 100%;
+    /* background: #000; */
+    position: relative;
+    font-family: "outfit";
+}
+
+.vid-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+}
+
+.vid-text {
+    background: var(--bgCol);
+    height: 65vh;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.vid-text h1 {
+    color: var(--subHeaderCol);
+    font-size: 60px;
+}
+
+.vid-text span {
+    color: var(--textCol);
+}
+
+.video {
+    /* display: flex; */
+    height: 60vh;
+    width: 70%;
+    /* background: red; */
+    position: absolute;
+    bottom: 78%;
+    border-radius: 30px;
+}
+
+.video video {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 1.0);
+    position: absolute;
+}
+
+.video .video-p {
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+.video-p a {
+    text-decoration: none;
+    color: #FFB900;
+}
+
+.video-p b {
+    color: var(--bgCol);
+}
+
+.repair-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.rep-content {
+    height: 300px;
+    width: 70%;
+}
+
+.rep-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+}
+
+.rep-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(216, 216, 216, 0.3), 0 6px 6px rgba(223, 223, 223, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+
+}
+
+
+
+.rep-images .rep-img img {
+    height: 100px;
+}
+
+.rep-img h3 {
+    margin: 10px 0px;
+    color: #3d3d3d;
+}
+
+
+
+.query-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    position: relative;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.middle-img img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.middle-img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-img,
+.right-img {
+    position: absolute;
+    bottom: 50px;
+    z-index: -1;
+}
+
+.left-img {
+    right: -30%;
+}
+
+.right-img {
+    left: -30%;
+}
+
+.form-section {
+    background: url(../images/red-generic.jpg);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 200px 0;
+}
+
+.form-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.form-text h1 {
+    color: var(--subHeaderCol);
+    font-size: 50px;
+}
+
+.form-p {
+    color: var(--textCol);
+}
+
+label {
+    color: var(--subHeaderCol);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.name-input {
+    display: flex;
+    gap: 80px;
+}
+
+.name-input input {
+    width: 300px;
+    padding-top: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    color: var(--pCol);
+    font-size: 15px;
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contact-input {
+    display: flex;
+    gap: 80px;
+}
+
+.contact-input input {
+    width: 300px;
+    padding-top: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    font-size: 15px;
+    color: var(--pCol);
+}
+
+.text-area textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.text-area textarea {
+    width: 700px;
+    min-width: 300px;
+    max-height: 200px;
+    min-height: 100px;
+    padding-top: 50px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    font-size: 15px;
+    color: var(--pCol);
+}
+
+.form-btn button {
+    width: 150px;
+    height: 60px;
+    background: var(--textCol);
+    color: var(--pCol);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.testimonial-section {
+    height: 100%;
+    /* background: red; */
+    padding: 40px 200px;
+}
+
+.test-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.test-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.test-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    height: 250px;
+    width: 600px;
+}
+
+footer {}
+
+.footer-container {
+    height: 60vh;
+    padding: 40px 200px;
+    background: var(--bgCol);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-right {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 100px;
+}
+
+.f-logo img {
+    height: 150px;
+}
+
+.info {
+    height: 500px;
+    width: 600px;
+    background: var(--subBgCol);
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 0px 0px 50px;
+}
+
+.location,
+.phone,
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.info-img {
+    position: relative;
+    left: -250px;
+}
+
+.info-img img {
+    object-fit: cover;
+}
+
+.rights-section {
+    height: 15vh;
+    background: #161616;
+    padding: 0 200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-icons {
+    padding: 20px;
+}
+
+.f-icons i {
+    color: var(--subBgCol);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.f-icons i:hover {
+    color: var(--headerCol);
+}
+
+hr {
+    background: #999;
+    height: 2px;
+    border: none;
+}
+
+.rights {
+    color: var(--pCol);
+    padding: 20px;
+}
+
+
+
+
+@media (max-width: 1600px) {
+    .container {
+        overflow-x: hidden;
+    }
+
+    .about {
+        gap: 0px;
+        height: 100%;
+    }
+
+    .porsche {
+        right: -80px;
+    }
+
+    .benz {
+        display: none;
+    }
+
+    .service {
+        height: 100%;
+    }
+
+    .advantage {
+        height: 100%;
+    }
+
+    .vid-text {
+        height: 40vh;
+    }
+
+    .repair-section {
+        margin-top: 300px;
+        bottom: 100px;
+    }
+
+    .query-images {
+        height: 80vh;
+    }
+
+    .right-img {
+        left: -40%;
+    }
+
+    .left-img {
+        right: -40%;
+    }
+
+    .form-section {
+        height: 100%;
+    }
+
+    .test-card {
+        height: 100%;
+    }
+
+    .testimonial-section {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-container {
+        height: 100%;
+    }
+
+    .rights-section {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero-content {
+        padding: 30px 100px;
+    }
+
+    .service {
+        height: 100%;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .service-card .service-img img {
+        height: 80px;
+    }
+
+    .card-text {
+        gap: 50px;
+        text-align: center;
+    }
+
+    .video {
+        top: 180px;
+        /* height: 50vh; */
+    }
+
+    .vid-content {
+        padding: 0;
+    }
+
+    .vid-text h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .repair-section {
+        margin-top: 150px;
+    }
+
+    .rep-content {
+        height: 100%;
+    }
+
+    .right-img,
+    .left-img {
+        display: none;
+    }
+
+    .testimonial-section {
+        height: 100%;
+        padding: 40px 120px;
+    }
+
+    .test-card {
+        width: 100%;
+    }
+
+    .footer-content {
+        gap: 150px;
+    }
+
+    .f-logo img {
+        height: 100px;
+    }
+
+    .info-img {
+        left: 0;
+    }
+
+    .info-img img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .navbar nav {
+        padding: 0 100px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero-content .hero-left h1 {
+        font-size: 90px;
+    }
+
+    .hero-right {
+        width: 50%;
+    }
+
+    .next-box {
+        left: 30px;
+        margin: 0;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-images {
+        padding-top: 20px;
+        display: flex;
+        gap: 50px;
+    }
+
+    .service-card {
+        gap: 10px;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .uae {
+        position: static;
+    }
+
+    .porsche {
+        position: static;
+    }
+
+    .advantage {
+        padding: 20px 100px;
+    }
+
+    .ad-benz {
+        left: 40%;
+    }
+
+    .query-images {
+        height: 100%;
+    }
+
+    .testimonial-section {
+        height: 100%;
+    }
+
+    .testimonial-content {
+        padding: 50px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rights-section {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .hero-content {
+        padding: 30px 30px;
+        display: grid;
+    }
+
+    .hero-img {
+        left: 3%;
+    }
+
+    .about {
+        padding: 40px 100px;
+    }
+
+    .about-images {
+        gap: 10px;
+    }
+
+    .service-content {
+        padding: 40px 0;
+    }
+
+    .service-cards {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        border: 2px solid #999;
+        padding: 10px;
+    }
+
+    .advantage-content {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .right-images {
+        display: flex;
+        gap: 30px;
+    }
+
+    .ad-benz,
+    .ad-porsche {
+        position: static;
+    }
+
+    .repair-section {
+        margin-top: 400px;
+        padding: 0px 200px;
+    }
+
+    .form-section {
+        padding: 40px 100px;
+    }
+
+    .testimonial-section {
+        padding: 50px 80px;
+    }
+
+    .test-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .test-card {
+        height: 100%;
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .home {
+        /* height: ; */
+    }
+
+    .hero-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content .hero-left h1 {
+        display: flex;
+        gap: 10px;
+        font-size: 50px;
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 100px;
+    }
+
+    .about-header {
+        display: flex;
+    }
+
+    br {
+        display: none;
+    }
+
+    .abt-btn button {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 120px;
+    }
+
+    .about-images {
+        margin-right: 310px;
+    }
+
+    .service {
+        padding: 40px 40px;
+    }
+
+    .advantage {
+        padding: 20px 40px;
+    }
+
+    .right-images {
+        gap: 5px;
+    }
+
+    .repair-section {
+        margin-top: 350px;
+    }
+
+    .form-section {
+        padding: 100px 0px 0px 5px;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .home {
+        height: fit-content;
+    }
+
+    .navbar nav .nav-ul {
+        display: none;
+    }
+
+    .logo img {
+        /* height: 20px; */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    /* HAMBURGER */
+    .harmbuger-menu {
+        --x-width: calc(var(--harmbuger-height) * 1.41421356237);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: max-content;
+        position: fixed;
+        top: 30px;
+        left: 10px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .harmbuger-menu::before,
+    .harmbuger-menu::after,
+    .harmbuger-menu input {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: var(--headerCol);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: 0.3s ease;
+    }
+
+    .harmbuger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+
+    /* Animation */
+
+    .harmbuger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(2px / -2);
+    }
+
+    .harmbuger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(2px / 2);
+    }
+
+    .harmbuger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    /* SIDEBAR */
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        translate: -100%;
+        background: var(--bgCol);
+        padding: 70px 20px;
+        transition: 0.3s ease;
+        z-index: 2;
+        color: var(--pCol);
+        font-family: "outfit";
+    }
+
+    .side-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .side-nav ul li {
+        list-style: none;
+    }
+
+    .side-nav ul li a {
+        color: var(--pCol);
+        text-decoration: none;
+    }
+
+    /* SHOW sidebar when checkbox is checked */
+    .harmbuger-menu:has(input:checked)+.side-nav {
+        translate: 0;
+    }
+
+
+    .hero-content .hero-left h1 {
+        display: flex;
+        gap: 10px;
+        font-size: 40px;
+    }
+
+    .hero-content {
+        display: grid;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-img img {
+        height: 250px;
+        top: -90px;
+    }
+
+    .next-box {
+        top: 60px;
+        height: 200px;
+    }
+
+    .about {
+        /* background: red; */
+        padding: 0;
+    }
+
+    .about-header h1{
+        font-size: 20px;
+    }
+
+    .abt-p b {
+        text-align: center;
+    }
+
+    .about-images {
+        display: none;
+    }
+
+    .text-content {
+        padding-left: 10px;
+    }
+
+    .text-content .abt-btn button {
+        height: 80px;
+        width: 140px;
+        padding: 5px;
+    }
+
+    .text-content .abt-btn button h1 {
+        font-size: larger;
+    }
+
+    .service-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .right-images .ad-porsche {
+        display: none;
+    }
+
+    .vid-content,
+    .vid-text,
+    .video {
+        display: none;
+    }
+
+    .repair-section {
+        margin-top: 0;
+        /* background-color: red; */
+        padding: 0;
+    }
+
+    .rep-images {
+        display: grid;
+        grid-template-columns: 2, 5fr;
+        gap: 0;
+
+    }
+
+    .rep-img {
+        width: 100%;
+    }
+
+    .form-section {
+        /* height: 100vh; */
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .name-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-input {
+        display: flex;
+        flex-direction: column;
+        /* gap: 0; */
+    }
+
+    .contact-input input {
+        width: 300px;
+    }
+
+    .text-area textarea {
+        width: 300px;
+    }
+
+    .testimonial-section {
+        height: fit-content;
+    }
+
+    .test-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info {
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        gap: 0;
+        /* height: 90vh; */
+    }
+
+    .info-text {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .info-text h1 {
+        text-align: center;
+    }
+
+    .footer-container {
+        /* padding-right: 100px; */
+    }
+
+    .f-logo img {
+        right: 0;
+        width: 100px;
+        object-fit: contain;
+    }
+
+    .f-icons i {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .home {
+        height: 100vh;
+    }
+
+    .hero-img img {
+        margin-top: 30%;
+    }
+
+    .next-box {
+        left: 0;
+    }
+
+    .next-box img {
+        left: -80px;
+    }
+
+    .about-images img{
+        display: none;
+    }
+
+    
+
+    .service-p {
+        gap: 4px;
+    }
+
+    .service-p p{
+        font-size: small;
+    }
+
+    .service-text h1{
+        font-size: 20px;
+    }
+
+    .service-card {
+        height: fit-content;
+    }
+
+    .advantage {
+        padding-left: 30px;
+    }
+
+    .ad-benz img{
+        width: 100%;
+    }
+
+    .left-header {
+        
+    }
+
+    .left-header h1 {
+        font-size: larger;
+    }
+
+    .video {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .about-images {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form-section {
+        height: max-content;
+    }
+
+    form input {
+        height: fit-content;
+    }
+
+    .input {
+        gap: 20px;
+        height: fit-content;
+    }
+
+    .name-input {
+        gap: 20px;
+    }
+
+    .contact-input {
+        gap: 20px;
+    }
+
+    .form-btn button {
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-section {
+        padding: 0 20px;
+    }
+
+    .test-text h1 {
+        font-size: larger !important;
+    }
+
+    .text-area textarea {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .footer-container {
+        height: 100%;
+    }
+
+    .info-text h1 {
+        font-size: larger;
+        text-align: center;
+    }
+
+    .f-logo img {
+        display: none;
+    }
+
+}
